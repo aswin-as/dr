@@ -97,5 +97,7 @@ header {
     transform: translateX(0%);
   }
   
- 
+ .mb-4{
+   font-size: 500;
+ }
   
