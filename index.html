@@ -71,7 +71,7 @@
         				<div class="container px-4 px-lg-5 text-center pt-4">
         				    <h1 class="mb-4 f-s-3-rem">For Appointment</h1>
         				    <h4 class="mb-4">+91 7025138765</h4>
-        				    <a class="btn btn-secondary p-3" href="https://wa.me/7025138765/?text=I%2C%20Need%20An%20to%20Appointment%20with%20you%20Doctor!
+        				    <a class="btn btn-secondary p-3" href="https://wa.me/7025138765/?text=I%20Need%20An%20%20Appointment%20with%20you%20Doctor!
                     "><i class="bi-telephone px-1"></i>Whatsapp</a>
         				</div>
         			</div>
@@ -148,6 +148,7 @@
         <!-- About Section END-->
         <!-- Carousel Section START-->
         <div class="container-fluid p-0 mt-5">
+          
         	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         	  <div class="carousel-indicators">
         	    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -156,6 +157,7 @@
         	    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
         	  </div>
         	  <div class="carousel-inner">
+             
         	    <div class="carousel-item active">
         	      <img src="assets/webp/1.jpg" class="d-block w-100 slider-img-size" alt="...">
         	    </div>
@@ -184,8 +186,11 @@
         <!-- Portfolio Section END-->
         <!-- Portfolio Section START-->
         <div id="portfolio">
+          
             <div class="container-fluid p-0 mt-5">
+             
             	<div class="row g-0">
+                <h2>How to maintain our skin</h2>
                     <div class="col-lg-6 col-sm-12 p-2">
                         <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
                           <img src="assets/webp/Cleansing.jpg" class="w-100" />
@@ -281,8 +286,8 @@
       <div class="contact-col">
           <h5>For Appointments </h5>
           
-          <P>Phone : <a href="tel:7025138765">7025138765</a> </P>
-          <p>Email : <a href="mailto:aswin.as.mystory@gmail.com" target="_blank">aswin.as.mystory@gmail.com</a></p>
+          <P>Phone : <a href="tel:8077941417">8077941417</a> </P>
+          <p>Email : <a href="mailto:drkratikamohan@gmail.com" target="_blank">drkratikamohan@gmail.com</a></p>
          
       </div>
 
@@ -291,12 +296,15 @@
   
               <input type="text" name="name" id="name" placeholder="Name" required >
               <br>
-            
-              <input type="email" name="email" id="email" placeholder="email" required>
-              <br>
-           
+
               <input type="number" name="phone" id="phone" maxlength="10" placeholder="Phone" required>
               <br>
+            
+              <input type="text" name="place" id="email" placeholder="place" required>
+              <br>
+           
+              
+              <textarea name="message" id="tarea" cols="10" rows="3" placeholder="message"></textarea>
               
              
               <input type="submit" class="sbt-btn">
@@ -324,10 +332,32 @@
         </footer>
 
 
+        <!-- script for form -->
+
+        <script>
+          var form = document.getElementById("my-form");
         
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("my-form-status");
+          var data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset()
+          }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
 
-
-
+        <!-- script form ended   -->
 
         <!-- Footer Section END-->
         <!-- Bootstrap core JS-->
